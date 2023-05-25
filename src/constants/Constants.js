@@ -9,8 +9,10 @@ export const COLORS = {
     dark: '#343a40',
     common: '#5A5A5A',
     bgColor: '#F5F5F5',
-    foreColor: '#fff'
-  };
+    foreColor: '#fff',
+    orderCardColor: '#555B6A',
+    orderDetailsCard: '#ECECEC'
+    };
 
 export const FONTS = {
     regular: {

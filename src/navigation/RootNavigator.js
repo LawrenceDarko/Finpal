@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// import { createDrawerNavigator, DrawerContentScrollView, useDrawerProgress } from '@react-navigation/drawer'
 
 // Screen imports
 import HomeScreen from '../screens/HomeScreen';
 import TransactionsScreen from '../screens/TransactionsScreen';
 import BudgetScreen from '../screens/BudgetScreen';
 import ReportsScreen from '../screens/ReportsScreen';
+
+// import CustomDrawerTwo from './CustomDrawerTwo';
 
 // Expo icons
 import { Entypo } from '@expo/vector-icons';
@@ -21,6 +24,7 @@ const DashboardStack = createNativeStackNavigator();
 const TransactionStack = createNativeStackNavigator();
 const BudgetStack = createNativeStackNavigator();
 const ReportsStack = createNativeStackNavigator();
+// const Drawer = createDrawerNavigator();
 
 const Tab = createBottomTabNavigator();
 
@@ -65,6 +69,20 @@ const ReportsStackNavigator = () => {
       </ReportsStack.Navigator>
     )
    }
+
+
+  // const DrawerStackNavigator = () => {
+  //   return (
+  //     <Drawer.Navigator backBehavior='firstRoute' drawerContent={props => <CustomDrawerTwo {...props}/>} screenOptions={{backBehavior: 'firstRoute', drawerType: 'slide', drawerItemStyle: {marginBottom: 15}, drawerLabelStyle: {marginLeft: -20}, drawerActiveBackgroundColor: '#fff', drawerActiveTintColor: COLORS.dark, drawerInactiveTintColor: COLORS.light}}>
+  //         <Drawer.Screen name='Home' component={ReportsScreen} options={{headerShown: false, drawerIcon: ({color})=><AntDesign name="home" size={24} color={color} />}}/>
+  //         <Drawer.Screen name='Wallet' component={WalletScreenStack} options={{headerShown: false, drawerIcon: ({color})=><Entypo name="wallet" size={24} color={color} />}}/>
+  //         <Drawer.Screen name='Orders' component={OrderScreenStack} options={{headerShown: false, drawerIcon: ({color})=><AntDesign name="filetext1" size={24} color={color} />}}/>
+  //         <Drawer.Screen name='Settings' component={SettingsScreenStack} options={{headerShown: false, drawerIcon: ({color})=><Ionicons name="settings-sharp" size={24} color={color} />}}/>
+  //         <Drawer.Screen name='Support' component={SupportScreenStack} options={{headerShown: false, drawerIcon: ({color})=><Ionicons name="ios-person-outline" size={24} color={color} />}}/>
+  //         <Drawer.Screen name='About' component={AboutScreenStack} options={{headerShown: false, drawerIcon: ({color})=><AntDesign name="exclamationcircleo" size={24} color={color} />}}/>
+  //     </Drawer.Navigator>
+  //   )
+  // }
 
 
 
